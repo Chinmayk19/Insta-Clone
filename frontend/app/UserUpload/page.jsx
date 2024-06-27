@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import {
   Box,
@@ -15,8 +15,12 @@ const UserUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [preview, setPreview] = useState("");
   const [uploading, setUploading] = useState(false);
+
+  // Check for token only on the client-side
+  const checkToken = typeof window !== "undefined" ? localStorage.getItem("auth-token") : null;
+
   const [postdata, setPostData] = useState({
-    token: localStorage.getItem("auth-token"),
+    token: checkToken,
     image_url: "",
     caption: "",
   });
@@ -98,9 +102,9 @@ const UserUpload = () => {
           flexDirection: "column",
           alignItems: "center",
           padding: 4,
-          backgroundColor: "#000", 
-          border: "2px solid #fff", 
-          color: "#fff", 
+          backgroundColor: "#000",
+          border: "2px solid #fff",
+          color: "#fff",
         }}
       >
         <Typography

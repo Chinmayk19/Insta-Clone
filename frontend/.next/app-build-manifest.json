@@ -11,15 +11,15 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/HomePage/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/HomePage/page.js"
-    ],
     "/LoginSignUp/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/LoginSignUp/page.js"
+    ],
+    "/HomePage/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/HomePage/page.js"
     ],
     "/UserUpload/page": [
       "static/chunks/webpack.js",
