@@ -40,8 +40,8 @@ const InstaPost = mongoose.model("InstaPost", {
   comments: {
     type: Array,
   },
-  caption:{
-    type:String,
+  caption: {
+    type: String,
   },
   postedAt: {
     type: Date,
@@ -122,7 +122,7 @@ app.post("/login", async (req, res) => {
     const passCompare = await bcrypt.compare(req.body.password, user.password);
     if (passCompare) {
       const token = user.token;
-      res.json({ success: true, token ,message:"Login Successful"});
+      res.json({ success: true, token, message: "Login Successful" });
     } else {
       res.json({ success: false, errors: "Wrong Password" });
     }
@@ -243,7 +243,6 @@ app.post("/like-img", async (req, res) => {
         post.likes.push(username);
         await post.save();
 
-        // Update user's likedimg array
         const user = await InstaUsers.findOne({ username });
         if (user) {
           user.likedimg.push(postId);
@@ -274,7 +273,6 @@ app.post("/unlike-img", async (req, res) => {
         post.likes.splice(index, 1);
         await post.save();
 
-        // Update user's likedimg array
         const user = await InstaUsers.findOne({ username });
         if (user) {
           const likedImgIndex = user.likedimg.indexOf(postId);
@@ -306,7 +304,6 @@ app.post("/comment-img", async (req, res) => {
       post.comments.push({ username, comment });
       await post.save();
 
-      // Update user's commentedPost array
       const user = await InstaUsers.findOne({ username });
       if (user && !user.commentedPost.includes(postId)) {
         user.commentedPost.push(postId);
