@@ -37,8 +37,8 @@ const LoginSignUp = () => {
 
     const url =
       text === "SignUp"
-        ? "https://insta-clone-phi-mocha.vercel.app/SignUp"
-        : "https://insta-clone-phi-mocha.vercel.app/Login";
+        ? "https://insta-clone-e6rm.onrender.com/SignUp"
+        : "https://insta-clone-e6rm.onrender.com/Login";
 
     try {
       const response = await axios.post(url, formData, {

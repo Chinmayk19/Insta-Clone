@@ -40,7 +40,7 @@ const UserUpload = () => {
     formData.append("image", selectedFile);
 
     try {
-      const response = await axios.post("https://insta-clone-phi-mocha.vercel.app/upload", formData, {
+      const response = await axios.post("https://insta-clone-e6rm.onrender.com/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           "Authorization": `Bearer ${localStorage.getItem("token")}`,
@@ -58,7 +58,7 @@ const UserUpload = () => {
     const dataToPost = { ...postdata, image_url };
 
     try {
-      const postResponse = await axios.post("https://insta-clone-phi-mocha.vercel.app/addimage", dataToPost, {
+      const postResponse = await axios.post("https://insta-clone-e6rm.onrender.com/addimage", dataToPost, {
         headers: {
           "Content-Type": "application/json",
         },

@@ -12,7 +12,7 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('https://insta-clone-phi-mocha.vercel.app/instaposts');
+        const response = await axios.get('https://insta-clone-e6rm.onrender.com/instaposts');
         setPosts(response.data.posts);
       } catch (error) {
         console.error('Error fetching posts:', error);
@@ -25,7 +25,7 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('https://insta-clone-phi-mocha.vercel.app/allusers');
+        const response = await axios.get('https://insta-clone-e6rm.onrender.com/allusers');
         setUsers(response.data.users);
       } catch (error) {
         console.error('Error fetching posts:', error);
