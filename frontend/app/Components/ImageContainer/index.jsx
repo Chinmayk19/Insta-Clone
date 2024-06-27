@@ -165,7 +165,7 @@ const Index = (props) => {
         {comments.slice(0, 2).map((comment, index) => (
           <Box key={index} sx={{ mb: 1 }}>
             <Typography variant="body2" sx={{ color: '#fff' }}>
-              <strong>{loggedInUsername}:</strong> {comment.comment}
+              <strong>{comment.username}:</strong> {comment.comment}
             </Typography>
           </Box>
         ))}
