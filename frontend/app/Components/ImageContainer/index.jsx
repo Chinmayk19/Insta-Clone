@@ -5,7 +5,7 @@ import { Container, Paper, Typography, Box, Button, TextField, Collapse } from '
 import axios from 'axios';
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:4001');
+const socket = io('https://insta-clone-phi-mocha.vercel.app');
 
 const Index = (props) => {
   const { users } = useUser();
@@ -25,8 +25,6 @@ const Index = (props) => {
       }
     }
   }, [token, users]);
-
-  // Check if the logged-in user has liked the post
   const hasLiked = likes.includes(loggedInUsername);
 
   useEffect(() => {
@@ -51,9 +49,9 @@ const Index = (props) => {
   const handleLike = async () => {
     try {
       if (hasLiked) {
-        await axios.post('http://localhost:4001/unlike-img', { postId: props._id, username: loggedInUsername });
+        await axios.post('https://insta-clone-phi-mocha.vercel.app/-img', { postId: props._id, username: loggedInUsername });
       } else {
-        await axios.post('http://localhost:4001/like-img', { postId: props._id, username: loggedInUsername });
+        await axios.post('https://insta-clone-phi-mocha.vercel.app/like-img', { postId: props._id, username: loggedInUsername });
       }
     } catch (error) {
       console.error('Error liking/unliking post:', error);
@@ -62,7 +60,7 @@ const Index = (props) => {
 
   const handleComment = async () => {
     try {
-      await axios.post('http://localhost:4001/comment-img', { postId: props._id, username: loggedInUsername, comment: newComment });
+      await axios.post('https://insta-clone-phi-mocha.vercel.app/comment-img', { postId: props._id, username: loggedInUsername, comment: newComment });
       setNewComment('');
       setShowCommentBox(false);
     } catch (error) {

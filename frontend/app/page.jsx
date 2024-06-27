@@ -7,7 +7,7 @@ import { RiInstagramFill } from "react-icons/ri";
 const IndexPage = () => {
   const router = useRouter();
   const [colorIndex, setColorIndex] = useState(0);
-  const colors = ['red', 'blue', 'green', 'yellow']; // Add more colors as needed
+  const colors = ['red', 'blue', 'green', 'yellow']; 
 
   useEffect(() => {
     const token = localStorage.getItem('auth-token');
@@ -21,7 +21,7 @@ const IndexPage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setColorIndex((prevIndex) => (prevIndex + 1) % colors.length);
-    }, 1000); // Change color every 1 second
+    }, 1000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -39,9 +39,9 @@ const IndexPage = () => {
     >
       <Box
         sx={{
-          color: colors[colorIndex], // Set the color dynamically
-          fontSize: '100px', // Set the size to 100px
-          transition: 'color 0.3s ease', // Transition effect on color change
+          color: colors[colorIndex], 
+          fontSize: '100px',
+          transition: 'color 0.3s ease',
         }}
       >
         <RiInstagramFill />

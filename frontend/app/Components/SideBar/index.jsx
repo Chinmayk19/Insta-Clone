@@ -31,17 +31,17 @@ const Index = () => {
   return (
     <Box 
       sx={{
-        position: "fixed",  // Ensure the sidebar is fixed
-        top: 0,             // Align the sidebar to the top of the viewport
-        bottom: 0,          // Fill the sidebar vertically from top to bottom
+        position: "fixed",  
+        top: 0,             
+        bottom: 0,          
         display: "flex",
         flexDirection: "column",
         alignContent: "center",
         width: 300,
-        backgroundColor: "#000", // Black background
-        color: "#fff", // White text color
+        backgroundColor: "#000",
+        color: "#fff", 
         p: 2,
-        zIndex: 1000, // Ensure it appears above other content
+        zIndex: 1000, 
       }}
     >
       <Box>

@@ -37,8 +37,8 @@ const LoginSignUp = () => {
 
     const url =
       text === "SignUp"
-        ? "http://localhost:4001/SignUp"
-        : "http://localhost:4001/Login";
+        ? "https://insta-clone-phi-mocha.vercel.app/SignUp"
+        : "https://insta-clone-phi-mocha.vercel.app/Login";
 
     try {
       const response = await axios.post(url, formData, {
@@ -72,9 +72,9 @@ const LoginSignUp = () => {
           flexDirection: "column",
           alignItems: "center",
           padding: 4,
-          backgroundColor: "#000", // Black background
+          backgroundColor: "#000", 
           border: "2px solid #fff", // White border
-          color: "#fff", // White text color
+          color: "#fff", 
         }}
       >
         <Typography

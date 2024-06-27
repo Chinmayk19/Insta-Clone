@@ -40,7 +40,7 @@ const UserUpload = () => {
     formData.append("image", selectedFile);
 
     try {
-      const response = await axios.post("http://localhost:4001/upload", formData, {
+      const response = await axios.post("https://insta-clone-phi-mocha.vercel.app/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           "Authorization": `Bearer ${localStorage.getItem("token")}`,
@@ -58,7 +58,7 @@ const UserUpload = () => {
     const dataToPost = { ...postdata, image_url };
 
     try {
-      const postResponse = await axios.post("http://localhost:4001/addimage", dataToPost, {
+      const postResponse = await axios.post("https://insta-clone-phi-mocha.vercel.app/addimage", dataToPost, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -98,9 +98,9 @@ const UserUpload = () => {
           flexDirection: "column",
           alignItems: "center",
           padding: 4,
-          backgroundColor: "#000", // Black background
-          border: "2px solid #fff", // White border
-          color: "#fff", // White text color
+          backgroundColor: "#000", 
+          border: "2px solid #fff", 
+          color: "#fff", 
         }}
       >
         <Typography
