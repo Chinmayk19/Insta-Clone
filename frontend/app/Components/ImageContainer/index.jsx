@@ -49,7 +49,7 @@ const Index = (props) => {
   const handleLike = async () => {
     try {
       if (hasLiked) {
-        await axios.post('https://insta-clone-e6rm.onrender.com/-img', { postId: props._id, username: loggedInUsername });
+        await axios.post('https://insta-clone-e6rm.onrender.com/unlike-img', { postId: props._id, username: loggedInUsername });
       } else {
         await axios.post('https://insta-clone-e6rm.onrender.com/like-img', { postId: props._id, username: loggedInUsername });
       }
