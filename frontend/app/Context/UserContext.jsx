@@ -12,7 +12,7 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await axios.get('https://insta-clone-e6rm.onrender.com/instaposts');
+        const response = await axios.get('http://localhost:4001/instaposts');
         setPosts(response.data.posts);
       } catch (error) {
         console.error('Error fetching posts:', error);
@@ -25,7 +25,7 @@ export const UserProvider = ({ children }) => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await axios.get('https://insta-clone-e6rm.onrender.com/allusers');
+        const response = await axios.get('http://localhost:4001/allusers');
         setUsers(response.data.users);
       } catch (error) {
         console.error('Error fetching posts:', error);

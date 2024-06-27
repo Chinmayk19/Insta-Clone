@@ -37,8 +37,8 @@ const LoginSignUp = () => {
 
     const url =
       text === "SignUp"
-        ? "https://insta-clone-e6rm.onrender.com/SignUp"
-        : "https://insta-clone-e6rm.onrender.com/Login";
+        ? "http://localhost:4001/SignUp"
+        : "http://localhost:4001/Login";
 
     try {
       const response = await axios.post(url, formData, {

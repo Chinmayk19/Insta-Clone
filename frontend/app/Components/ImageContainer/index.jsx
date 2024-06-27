@@ -5,7 +5,7 @@ import { Container, Paper, Typography, Box, Button, TextField, Collapse } from '
 import axios from 'axios';
 import io from 'socket.io-client';
 
-const socket = io('https://insta-clone-e6rm.onrender.com');
+const socket = io('http://localhost:4001');
 
 const Index = (props) => {
   const { users } = useUser();
@@ -49,9 +49,9 @@ const Index = (props) => {
   const handleLike = async () => {
     try {
       if (hasLiked) {
-        await axios.post('https://insta-clone-e6rm.onrender.com/unlike-img', { postId: props._id, username: loggedInUsername });
+        await axios.post('http://localhost:4001/unlike-img', { postId: props._id, username: loggedInUsername });
       } else {
-        await axios.post('https://insta-clone-e6rm.onrender.com/like-img', { postId: props._id, username: loggedInUsername });
+        await axios.post('http://localhost:4001/like-img', { postId: props._id, username: loggedInUsername });
       }
     } catch (error) {
       console.error('Error liking/unliking post:', error);
@@ -60,7 +60,7 @@ const Index = (props) => {
 
   const handleComment = async () => {
     try {
-      await axios.post('https://insta-clone-e6rm.onrender.com/comment-img', { postId: props._id, username: loggedInUsername, comment: newComment });
+      await axios.post('http://localhost:4001/comment-img', { postId: props._id, username: loggedInUsername, comment: newComment });
       setNewComment('');
       setShowCommentBox(false);
     } catch (error) {
