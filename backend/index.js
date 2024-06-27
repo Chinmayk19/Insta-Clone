@@ -1,4 +1,4 @@
-const port =process.env.port || 4001;
+const port =4001;
 const express = require("express");
 const app = express();
 const validator = require("validator");

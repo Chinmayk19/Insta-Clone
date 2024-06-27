@@ -44,7 +44,7 @@ const UserUpload = () => {
     formData.append("image", selectedFile);
 
     try {
-      const response = await axios.post("https://insta-clone-e6rm.onrender.com/upload", formData, {
+      const response = await axios.post("http://localhost:4001/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           "Authorization": `Bearer ${localStorage.getItem("token")}`,
@@ -62,7 +62,7 @@ const UserUpload = () => {
     const dataToPost = { ...postdata, image_url };
 
     try {
-      const postResponse = await axios.post("https://insta-clone-e6rm.onrender.com/addimage", dataToPost, {
+      const postResponse = await axios.post("http://localhost:4001/addimage", dataToPost, {
         headers: {
           "Content-Type": "application/json",
         },
