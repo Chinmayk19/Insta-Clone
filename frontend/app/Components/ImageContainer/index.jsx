@@ -108,14 +108,14 @@ const Index = (props) => {
           {props.username}
         </Typography>
       </Box>
-      <Box sx={{ textAlign: 'center', margin: 2 }}>
+      <Box sx={{ textAlign: 'center', marginY:2 }}>
         <img
           src={props.image}
           style={{
-            width: '325px',
-            height: 'auto',
+            width: '400px',
+            height: '400px',
             objectFit: 'cover',
-            borderRadius: '8px',
+            borderRadius: '2px',
           }}
         />
       </Box>
