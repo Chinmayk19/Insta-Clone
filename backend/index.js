@@ -319,3 +319,14 @@ app.post("/comment-img", async (req, res) => {
     return res.status(500).json({ success: false, message: "Server error" });
   }
 });
+// moke route
+app.get("/moke",(req,res)=>{
+  res.json({
+    success:true,
+    message:"Moke Route",
+    data:{
+      id:1,
+      name:"Chinmay Chandrakant Kulkarni",
+    },
+  });
+});
